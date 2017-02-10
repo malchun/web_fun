@@ -1,2 +1,2 @@
-# web_fun
-Project for testing and playing with different web technologies.
+# Web fun!
+Project for testing and playing with different technologies.
