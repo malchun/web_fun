@@ -1,6 +1,7 @@
 import os
 from flask import Flask, redirect, url_for, request, render_template
 from pymongo import MongoClient
+from datetime import datetime
 
 app = Flask(__name__)
 
@@ -24,7 +25,8 @@ def new():
 
     item_doc = {
         'name': request.form['name'],
-        'description': request.form['description']
+        'description': request.form['description'],
+        'time': str(datetime.now().strftime("%A, %d %B %Y %I:%M%p"))
     }
     db.tododb.insert_one(item_doc)
 
