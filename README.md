@@ -14,6 +14,7 @@ Let's see where it'll come.
 * Python3
 * Flask
 * Mongo
+* Nginx
 
 ## Development tools:
 * PyCharm CE

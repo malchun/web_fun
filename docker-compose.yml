@@ -3,11 +3,18 @@ services:
   web:
     build: ./app
     command: python3 -u app.py
-    ports:
-      - "5000:5000"
     volumes:
       - ./app:/todo
     links:
       - db
   db:
     image: mongo:3.4
+  nginx:
+    image: nginx:1.11.10
+    links:
+      - web
+    ports:
+      - "5000:5000"
+    volumes:
+      - "./nginx/nginx.conf:/etc/nginx/nginx.conf"
+      - "./static:/static:ro"

@@ -1,11 +1,19 @@
-<form action="/new" method="POST">
-  <input type="text" name="name"></input>
-  <input type="text" name="description"></input>
-  <input type="submit"></input>
-</form>
+<html>
+<head>
+  <title> Test site. </title>
+  <link rel="icon" type="image/png" href="/favicon.ico" />
+</head>
+<body>
+  <form action="/new" method="POST">
+    <input type="text" name="name"></input>
+    <input type="text" name="description"></input>
+    <input type="submit"></input>
+  </form>
 
-{% for item in items %}
-  <h1> {{ item.name }} </h1>
-  <p> {{ item.description }} <p>
-  <p> {{ item.time }} <p>
-{% endfor %}
+  {% for item in items %}
+    <h1> {{ item.name }} </h1>
+    <p> {{ item.description }} <p>
+    <p> {{ item.time }} <p>
+  {% endfor %}
+</body>
+</html>
